@@ -19,5 +19,5 @@ colaborativo utilizando Git y GitHub
 
 |No.|Descripción|Potenciador|Estatus|
 |---|---|----|----|
-|1.|Declaracion de Variables|1|Progreso|
+|1.|Declaracion de Variables|1|✅ Finalizada|
 

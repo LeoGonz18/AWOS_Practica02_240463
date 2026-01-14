@@ -20,4 +20,4 @@ colaborativo utilizando Git y GitHub
 |No.|Descripción|Potenciador|Estatus|
 |---|---|----|----|
 |1.|Declaracion de Variables|1|✅ Finalizada|
-
+|2.|Tipos de Datos|7|✅ Finalizada|

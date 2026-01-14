@@ -117,5 +117,148 @@ console.log(`Los valores de las variables declaradas para los datos de la propie
             statusProperty : ${typeof(statusProperty)}
             typeProperty : ${typeof(typeProperty)}`);
 
+    /* Existen Metodos para manipular los datos del tipo STRING, como: */
+    
+    /* El metodo toUperCase que convierte todas las letras en mayusculas*/
+    console.log(`El usuario logeado es: ${usuarioLogeado.toUpperCase()}`);
 
+    /* Por lo contrario en el metodo toLowerCase convierte todo el texto a minusculas*/
+    console.log(`Descripcion de la propiedad en venta: ${descriptionPropiety.toLowerCase()}`);
+
+    /* Tambien existe la propiedad que cuenta el número de caracteres que forman el texto, llamado length (tamaño)*/
+    console.log(`La longitud del nombre de la propiedad es de: ${nameProperty.length}`);
+
+    /* Tenemos un metodo que nos permite hacer subcadenas o extraer la porcion de la palabra en base a su pocisionamiento*/
+    let lastname = fullnamOwner.slice(8, fullnamOwner.length);
+    console.log(`El apellido del propietario es: ${lastname}`);
+
+    /* Otra funcion util es aquella que nos permite remplazar letras o palabras dentro del texto denominada replace() */
+    console.log(`Remplazo de la palabra MAR por RÍo, Descripcion de la propiedad: ${descriptionPropiety.replace("mar", "RIO")}`);
+
+    /* O el remplazo de todas las ocurrencias de una letra o palabra*/
+    console.log(`Remplazo de las letras A por en numero 4, Nombre de la propiedad: ${nameProperty.replaceAll("a", "4")}`);
+
+
+    /* 5.- BIGITN (Entero de alta presicion o alta amplitud)*/
+    let numeroGrande1 = 1234567890;  // 10 digitos
+    let numeroGrande2 = 12345678901234567890; // 20 digitos
+    let numeroGrande3 = 123456789012345678901234567890; //30 digitos
+    let numeroGrande4 = 1234567890123456789012345678901234567890; //40 digitos
+
+    /*Imprimimos los valores de las variables y observemos que pasa*/
+    console.log(`Los valores y tipos de datos son:
+        numeroGrande1, valor = ${numeroGrande1}, tipo ${typeof(numeroGrande1)}
+        numeroGrande2, valor = ${numeroGrande2}, tipo ${typeof(numeroGrande2)}
+        numeroGrande3, valor = ${numeroGrande3}, tipo ${typeof(numeroGrande3)}
+        numeroGrande4, valor = ${numeroGrande4}, tipo ${typeof(numeroGrande4)}`);
+
+        /* Para no perder presicion en estos numero JavaScript tiene un tipo de dato especial denominado BIGINT, para poder almacenar el valor en este tipo de dato
+        solo basta con invocar el metodo de conversion de la inicializacion*/
+
+    numeroGrande1 = BigInt("1234567890");  // 10 digitos
+    numeroGrande2 = BigInt("12345678901234567890"); // 20 digitos
+    numeroGrande3 = BigInt("123456789012345678901234567890"); //30 digitos
+    numeroGrande4 = BigInt("1234567890123456789012345678901234567890"); //40 digitos
+    
+
+    console.log(`Los valores y tipos de datos son:
+    numeroGrande1, valor = ${numeroGrande1}, tipo ${typeof(numeroGrande1)}
+    numeroGrande2, valor = ${numeroGrande2}, tipo ${typeof(numeroGrande2)}
+    numeroGrande3, valor = ${numeroGrande3}, tipo ${typeof(numeroGrande3)}
+    numeroGrande4, valor = ${numeroGrande4}, tipo ${typeof(numeroGrande4)}`);
+
+    /* 6.- SYMBOL
+    /*Es el tipo de daro a parte de almacenar el valor, almacena la direccion fisica en memoria, donde se almacena el valor, logrando
+    que todos los valores de cada variable siempre sean UNICOS*/
+
+    console.warn("6.- SYMBOL (Simbolos)");
+
+    const numero1 = 3;
+    const numero2 = 3.0;
+    const numero3 = "3";
+    const numero4 = "3.0";
+    const numero5= Symbol(3);
+    const numero6 = Symbol(3.0);
+    const numero7 = Symbol("3");
+    const numero8 = Symbol("3.0");
+    const numero9 = Symbol(3);
+
+    console.log(`Imprimir los valores y tipos de datos:
+        numero1, valor = ${numero1}, tipoDato: ${typeof(numero1)}
+        numero2, valor = ${numero2}, tipoDato: ${typeof(numero2)}
+        numero3, valor = ${numero3}, tipoDato: ${typeof(numero3)}
+        numero4, valor = ${numero4}, tipoDato: ${typeof(numero4)}
+        numero5, valor: ${numero5.description}, tipoDato: ${typeof(numero5)}
+        numero6, valor: ${numero6.description}, tipoDato: ${typeof(numero6)}
+        numero7, valor: ${numero7.description}, tipoDato: ${typeof(numero7)}
+        numero8, valor: ${numero8.description}, tipoDato: ${typeof(numero8)}`);
+        
+
+        /* Realizando un par de validaciones*/
+        if(numero1 == numero2)
+            console.log("Se comparo el valor de numero1 y numero2 evaluando que son iguales en valor");
+        else 
+            console.log("Se comparo el valor numeor1 y numero2 evaluando que son diferentes en valor");
+
+        if(numero1 == numero3)
+            console.log("Se comparo el valor de numero1 y numero3 evaluando que son iguales en valor");
+        else 
+            console.log("Se comparo el valor numeor1 y numero3 evaluando que son diferentes en valor");
+
+        if(numero1 === numero3)
+            console.log("Se comparo el valor de numero1 y numero3 evaluando que son iguales en valor");
+        else 
+            console.log("Se comparo el valor numeor1 y numero3 evaluando que son iguales en valor pero diferente tipo de dato");
+
+        if(numero1 == numero4)
+            console.log("Se comparo el valor de numero1 y numero4 evaluando que son iguales en valor");
+        else 
+            console.log("Se comparo el valor numeor1 y numero4 evaluando que son diferentes en valor");
+
+         if(numero1 === numero4)
+            console.log("Se comparo el valor de numero1 y numero4 evaluando que son iguales en valor");
+        else 
+            console.log("Se comparo el valor numeor1 y numero4 evaluando que son iguales en valor pero diferente tipo de dato");
+
+        if(numero1 == numero5)
+            console.log("Se comparo el valor de numero1 y numero5 evaluando que son iguales en valor");
+        else 
+            console.log("Se comparo el valor numeor1 y numero5 evaluando que son diferentes en valor");
+
+        if(numero5 == numero9)
+            console.log("Se comparo el valor de numero5 y numero9 evaluando que son iguales en valor");
+        else 
+            console.log("Se comparo el valor numeor5 y numero9 evaluando que son iguales en valor pero diferente tipo de dato");
+
+        /* 7.- NULL (Nulo)*/
+         /*Este tipo de datos es similar o UNDEFINED, con la diferencia de que los usuarios o el sistema es conciente que se le asigno este valor*/
+
+         let isPremiumUser;
+         let isUserLoged;
+         var todayDate = new Date();
+         var lastLogin = todayDate;
+         let isNewUser;
+
+         console.warn("7.- NULL (Nulo)");
+
+         console.log(`Las variables del usuario son:
+            isPremiumUser, valor: ${isPremiumUser}, tipo: ${typeof(isPremiumUser)}
+            isUserLoged, valor: ${isUserLoged}, tipo: ${typeof(isUserLoged)}
+            isNewUser, valor: ${isNewUser}, tipo: ${typeof(isNewUser)}`)
+
+            /*Durante la navegacion del usuario en la plataforma en algun punto ingresa sus credenciales y se valida en base date*/
+
+            /*Simulando que las credenciales fueran correctas*/
+            isUserLoged = true;
+            isPremiumUser = null;
+
+            if(lastLogin == todayDate)
+                isNewUser = true;
+            else 
+                isNewUser = false;
+
+            console.log(`Las variables del usuario son:
+                isPremium, valor: ${isPremiumUser}, tipo: ${typeof(isPremiumUser)}
+                isUserLoged, valor: ${isUserLoged}, tipo: ${typeof(isUserLoged)}
+                isNewUser, valor: ${isNewUser}, tipo: ${typeof(isNewUser)}`);
 

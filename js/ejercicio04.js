@@ -1,5 +1,5 @@
-// Personalizamos el separador del ejercicio 04
-console.log("%c4.- Ejercicio 04: Objetos ",style_console);
+//Estilización de la barra zona de pruebas en el DevTools en el navegador
+console.log("%cEjercicio 04: Objetos ",style_console);
 
 console.warn("1. Propiedades de un Objeto")
 // Esto no es un objeto son variables independientes que no se encuentran asociadas
